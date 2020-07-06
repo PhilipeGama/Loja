@@ -1,0 +1,1 @@
+[{"preco":10,"tipo":"Comida","qtdEstoque":5,"nome":"Pera","id":5},{"preco":10,"tipo":"Suco","qtdEstoque":5,"nome":"Cacau","id":2},{"preco":5,"tipo":"Suco","qtdEstoque":10,"nome":"Uva","id":3},{"preco":1.5,"tipo":"Suco","qtdEstoque":20,"nome":"Maçaa","id":4},{"preco":5,"tipo":"Suco","qtdEstoque":5,"nome":"Suco de Manga","id":5}]
