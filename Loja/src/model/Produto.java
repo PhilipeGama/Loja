@@ -23,7 +23,7 @@ public class Produto {
     private String tipo;
     private static int ultimo;
 
-    private static final String caminho = "arquivos/produtos.txt";
+    private static final String caminho = "src/arquivos/produtos.txt";
     
     public String getTipo() {
         return tipo;

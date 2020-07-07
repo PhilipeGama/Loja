@@ -19,7 +19,7 @@ public class Mensagem {
     private boolean status;
     private static int ultimo;
     
-    private static final String caminho = "arquivos/mensagens.txt";
+    private static final String caminho = "src/arquivos/mensagens.txt";
 
     //DateTimeFormatter dma = DateTimeFormatter.ofPattern("dd/MM/aaaa");
     

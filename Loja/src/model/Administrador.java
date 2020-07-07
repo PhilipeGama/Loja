@@ -22,7 +22,7 @@ public class Administrador{
     private String nome;
     private String senha;
     private static int ultimo;
-    private static final String caminho = "arquivos/administradores.txt";
+    private static final String caminho = "src/arquivos/administradores.txt";
 
     //DateTimeFormatter dma = DateTimeFormatter.ofPattern("dd/MM/aaaa");
     
@@ -90,11 +90,11 @@ public class Administrador{
         String base = Arquivo.Read(caminho);
         JSONArray jA = new JSONArray();
         if(!base.isEmpty() && base.length()>5)
-        jA = new JSONArray(base);
+            jA = new JSONArray(base);
         if(row >= 0){
-        jA.put(row,json);
+            jA.put(row,json);
         }else{
-          jA.put(json); 
+            jA.put(json); 
         }
         
         Arquivo.Write(caminho,jA.toString());
@@ -109,10 +109,8 @@ public class Administrador{
         if(!base.isEmpty() && base.length()>5)
             jA = new JSONArray(base);
         jA.remove(row);
-        Arquivo.Write(caminho, jA.toString());
-        
-        return true;
-        
+        Arquivo.Write(caminho, jA.toString());  
+        return true;   
     }
     
     public static int buscarNome(String nome){

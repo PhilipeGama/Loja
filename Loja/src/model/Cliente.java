@@ -22,7 +22,7 @@ public class Cliente {
     private String email;
     
     
-    private static final String caminho = "arquivos/clientes.txt";
+    private static final String caminho = "src/arquivos/clientes.txt";
     private static int ultimo ;
     
     public Cliente(){

@@ -19,7 +19,7 @@ public class Categoria {
     private String tipo;
     private static int ultimo;
     
-    private static final String caminho = "arquivos/categorias.txt";
+    private static final String caminho = "src/arquivos/categorias.txt";
     
     public Categoria(){
         

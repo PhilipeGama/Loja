@@ -22,7 +22,7 @@ public class ItemCompra {
 //    private ArrayList<Integer> produtoID;
     private ArrayList<Integer> qtdProduto;
     private ArrayList<Integer> produtoId;
-    private static String caminho = "arquivos/compras.txt";
+    private static String caminho = "src/arquivos/compras.txt";
     
     public ItemCompra(){
         
