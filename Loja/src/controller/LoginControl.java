@@ -18,10 +18,9 @@ public class LoginControl {
     public static boolean verificarLoginAdmin(String nome,String senha){
           ArrayList<Administrador> a1 = Administrador.getAdmins();
        
-          //System.out.println("1");
           for(Administrador a: a1){
               if(a.getNome().equals(nome) && a.getSenha().equals(senha)){
-                  //System.out.println("1111");
+  
                   MenuAdministradorView MaV = new MenuAdministradorView();
                   MaV.setVisible(true);
                   return true;
@@ -34,12 +33,11 @@ public class LoginControl {
      public static boolean verificarLoginCliente(String nome,String senha){
           ArrayList<Cliente> c1 = Cliente.getClientes();
        
-          //System.out.println("1");
           int i =0;
           for(Cliente c: c1){
               if(c.getNome().equals(nome) && c.getSenha().equals(senha)){
                 
-                  //MaV.setVisible(true);
+                 
                   
                   MenuClienteView MC1 = new MenuClienteView();
                   MenuClienteControl MC = new MenuClienteControl(i);

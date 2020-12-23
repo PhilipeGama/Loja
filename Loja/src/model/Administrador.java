@@ -22,7 +22,7 @@ public class Administrador{
     private String nome;
     private String senha;
     private static int ultimo;
-    private static final String caminho = "src/arquivos/administradores.txt";
+    private static final String caminho = "src/arquivos/administrador.txt";
 
     //DateTimeFormatter dma = DateTimeFormatter.ofPattern("dd/MM/aaaa");
     

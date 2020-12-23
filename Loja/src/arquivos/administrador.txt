@@ -1,1 +1,1 @@
-[{"senha":"123","nome":"Pedro","id":1}]
+[{"senha":"123","nome":"pedro","id":1}]

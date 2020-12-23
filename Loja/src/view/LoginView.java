@@ -151,9 +151,10 @@ public class LoginView extends javax.swing.JFrame {
         if(LoginControl.verificarLoginAdmin(jtf_Nome.getText(),jtf_Senha.getText())){
               this.dispose();
         }
-        if(LoginControl.verificarLoginCliente(jtf_Nome.getText(),jtf_Senha.getText())){
+        else if(LoginControl.verificarLoginCliente(jtf_Nome.getText(),jtf_Senha.getText())){
             this.dispose();
-        }else{
+        }
+        else{
         JOptionPane.showMessageDialog(null, "Erro senha ou usuário incorreta");
         }
            
