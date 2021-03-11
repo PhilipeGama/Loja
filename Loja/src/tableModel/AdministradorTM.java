@@ -132,4 +132,10 @@ public class AdministradorTM extends AbstractTableModel{
     public boolean isEmpty() {
         return linhas.isEmpty();
     }   
+    
+    public int novoId() {
+    // Novo id
+        int ultimoIndice = getRowCount() + 1;
+        return ultimoIndice;
+    }
 }

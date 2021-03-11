@@ -33,11 +33,11 @@ public class LoginView extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jtf_Nome = new javax.swing.JTextField();
-        jtf_Senha = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
         jbt_Confirmar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
         jbt_Confirmar1 = new javax.swing.JButton();
+        jtf_Senha = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -84,16 +84,16 @@ public class LoginView extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1)
-                        .addGap(22, 22, 22)
-                        .addComponent(jtf_Nome, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2)
-                        .addGap(18, 18, 18)
-                        .addComponent(jtf_Senha))
                     .addComponent(jbt_Confirmar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jbt_Confirmar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(jbt_Confirmar1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2))
+                        .addGap(15, 15, 15)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jtf_Senha)
+                            .addComponent(jtf_Nome, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -107,7 +107,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jtf_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(33, 33, 33)
                 .addComponent(jbt_Confirmar, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
@@ -148,10 +148,12 @@ public class LoginView extends javax.swing.JFrame {
 
     private void jbt_ConfirmarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbt_ConfirmarActionPerformed
         // TODO add your handling code here:
-        if(LoginControl.verificarLoginAdmin(jtf_Nome.getText(),jtf_Senha.getText())){
+         String senha = String.valueOf(jtf_Senha.getPassword());
+        if(LoginControl.verificarLoginAdmin(jtf_Nome.getText(),senha)){
               this.dispose();
         }
-        else if(LoginControl.verificarLoginCliente(jtf_Nome.getText(),jtf_Senha.getText())){
+       
+        else if(LoginControl.verificarLoginCliente(jtf_Nome.getText(),senha)){
             this.dispose();
         }
         else{
@@ -214,6 +216,6 @@ public class LoginView extends javax.swing.JFrame {
     private javax.swing.JButton jbt_Confirmar;
     private javax.swing.JButton jbt_Confirmar1;
     private javax.swing.JTextField jtf_Nome;
-    private javax.swing.JTextField jtf_Senha;
+    private javax.swing.JPasswordField jtf_Senha;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,14 +16,13 @@ import javax.swing.JOptionPane;
  * @author Philipe
  */
 public class AdministradorView extends javax.swing.JFrame {
-     AdministradorTM modelo; 
+    AdministradorTM modelo; 
     public void loadTable(){
        modelo = new AdministradorTM(AdministradorControl.getAdmins());
        jtb_Admin.setModel(modelo);
-
-        jtb_Admin.getColumnModel().getColumn(0).setPreferredWidth(10);
-        jtb_Admin.getColumnModel().getColumn(1).setPreferredWidth(100);
-        jtb_Admin.getColumnModel().getColumn(2).setPreferredWidth(150);
+       jtb_Admin.getColumnModel().getColumn(0).setPreferredWidth(10);
+       jtb_Admin.getColumnModel().getColumn(1).setPreferredWidth(100);
+       jtb_Admin.getColumnModel().getColumn(2).setPreferredWidth(150);
        
     } 
     /**
@@ -31,9 +30,9 @@ public class AdministradorView extends javax.swing.JFrame {
      */
     public AdministradorView() {
         initComponents();
-        
+        int novoId = AdministradorControl.novoId()+1;
         loadTable();
-        
+        jtf_Id.setText(Integer.toString(novoId));
     }
 
     /**
